@@ -1,4 +1,4 @@
-python tulpar.py action web_URL
+python vcsan.py action web_URL
   action      Action: full xss sql fuzzing e-mail credit-card whois links
               portscanner urlEncode cyberthreatintelligence commandInjection
               directoryTraversal fileInclude headerCheck certificate method
@@ -6,7 +6,7 @@ python tulpar.py action web_URL
   web_URL     URL
 
 Usage: whois
-python tulpar.py  whois https://google.com
+python vcsan.py  whois https://google.com
 google.com
 [+]URL: https://google.com 
 ==========
@@ -17,7 +17,7 @@ google.com
 [+]Email:  [u'abusecomplaints@markmonitor.com', u'contact-admin@google.com', u'dns-admin@google.com']
 
 Usage: xss
-python tulpar.py xss http://192.168.213.168/xss/example1.php?name=hacker
+python vcsan.py xss http://192.168.213.168/xss/example1.php?name=hacker
 192.168.213.168
 [+]URL: http://192.168.213.168/xss/example1.php?name=hacker 
 ==========
@@ -29,7 +29,7 @@ python tulpar.py xss http://192.168.213.168/xss/example1.php?name=hacker
 [+]XSS URL:  http://192.168.213.168/xss/example1.php?name=<scriPt>alert(XSS)</scriPt>
 
 Usage:sql
-python tulpar.py sql http://192.168.213.168/sqli/example1.php?name=root
+python vcsan.py sql http://192.168.213.168/sqli/example1.php?name=root
 192.168.213.168
 [+]URL: http://192.168.213.168/sqli/example1.php?name=root 
 ==========
@@ -47,32 +47,32 @@ python tulpar.py sql http://192.168.213.168/sqli/example1.php?name=root
 [+]Sqli URL:  http://192.168.213.168/sqli/example1.php?name=' and '1'='1
 
 Usage: fuzzing
-python tulpar.py fuzzing http://192.168.213.168
+python vcsan.py fuzzing http://192.168.213.168
 192.168.213.168
 [+]URL: http://192.168.213.168 
 ==========
 
 Usage:e-mail
-python tulpar.py e-mail http://192.168.213.168
+python vcsan.py e-mail http://192.168.213.168
 192.168.213.168
 [+]URL: http://192.168.213.168 
 ==========
 [+]E-mail:  louis@pentesterlab.com
 
 Usage:credit-card
-python tulpar.py credit-card http://192.168.213.168
+python vcsan.py credit-card http://192.168.213.168
 192.168.213.168
 [+]URL: http://192.168.213.168 
 ==========
 
 Usage:links
-python tulpar.py links http://192.168.213.168
+python vcsan.py links http://192.168.213.168
 192.168.213.168
 [+]URL: http://192.168.213.168 
 ==========
 
 Usage:portscanner
- python tulpar.py portscanner http://192.168.213.168/
+ python vcsan.py portscanner http://192.168.213.168/
 192.168.213.168
 [+]URL: http://192.168.213.168/ 
 ==========
@@ -83,7 +83,7 @@ Finish port: 100
 [+] 80  - 
 
 Usage:urlEncode
-python tulpar.py urlEncode http://192.168.213.168
+python vcsan.py urlEncode http://192.168.213.168
 192.168.213.168
 [+]URL: http://192.168.213.168 
 ==========
@@ -91,7 +91,7 @@ python tulpar.py urlEncode http://192.168.213.168
 
 
 Usage:cyberthreatintelligence
-python tulpar.py cyberthreatintelligence http://google.com
+python vcsan.py cyberthreatintelligence http://google.com
 google.com
 [+]URL: http://google.com 
 ==========
@@ -101,7 +101,7 @@ google.com
 
 
 Usage:commandInjection
-python tulpar.py commandInjection http://192.168.213.168/commandexec/example1.php?ip=127.0.0.1
+python vcsan.py commandInjection http://192.168.213.168/commandexec/example1.php?ip=127.0.0.1
 192.168.213.168
 [+]URL: http://192.168.213.168/commandexec/example1.php?ip=127.0.0.1 
 ==========
@@ -185,7 +185,7 @@ user:x:1000:1000:Debian Live user,,,:/home/user:/bin/bash
 </html>
 
 Usage:directoryTraversal
-python tulpar.py directoryTraversal http://192.168.213.168/dirtrav/example1.php?file=hacker.png
+python vcsan.py directoryTraversal http://192.168.213.168/dirtrav/example1.php?file=hacker.png
 192.168.213.168
 [+]URL: http://192.168.213.168/dirtrav/example1.php?file=hacker.png 
 ==========
@@ -216,7 +216,7 @@ user:x:1000:1000:Debian Live user,,,:/home/user:/bin/bash
 
 
 Usage:fileInclude
-python tulpar.py fileInclude http://192.168.213.168/fileincl/example1.php?page=intro.php
+python vcsan.py fileInclude http://192.168.213.168/fileincl/example1.php?page=intro.php
 192.168.213.168
 [+]URL: http://192.168.213.168/fileincl/example1.php?page=intro.php 
 ==========
@@ -304,7 +304,7 @@ user:x:1000:1000:Debian Live user,,,:/home/user:/bin/bash
 </html>
 
 Usage:headerCheck
-python tulpar.py headerCheck http://192.168.213.168
+python vcsan.py headerCheck http://192.168.213.168
 192.168.213.168
 [+]URL: http://192.168.213.168 
 ==========
@@ -313,7 +313,7 @@ python tulpar.py headerCheck http://192.168.213.168
 [+]No XSS protection
 
 Usage:certificate
-python tulpar.py certificate https://google.com
+python vcsan.py certificate https://google.com
 google.com
 [+]URL: https://google.com 
 ==========
@@ -323,7 +323,7 @@ google.com
 [+]Certificate: {'crlDistributionPoints': (u'http://pki.google.com/GIAG2.crl',), 'subjectAltName': (('DNS', '*.google.com'), ('DNS', '*.android.com'), ('DNS', '*.appengine.google.com'), ('DNS', '*.cloud.google.com'), ('DNS', '*.db833953.google.cn'), ('DNS', '*.g.co'), ('DNS', '*.gcp.gvt2.com'), ('DNS', '*.google-analytics.com'), ('DNS', '*.google.ca'), ('DNS', '*.google.cl'), ('DNS', '*.google.co.in'), ('DNS', '*.google.co.jp'), ('DNS', '*.google.co.uk'), ('DNS', '*.google.com.ar'), ('DNS', '*.google.com.au'), ('DNS', '*.google.com.br'), ('DNS', '*.google.com.co'), ('DNS', '*.google.com.mx'), ('DNS', '*.google.com.tr'), ('DNS', '*.google.com.vn'), ('DNS', '*.google.de'), ('DNS', '*.google.es'), ('DNS', '*.google.fr'), ('DNS', '*.google.hu'), ('DNS', '*.google.it'), ('DNS', '*.google.nl'), ('DNS', '*.google.pl'), ('DNS', '*.google.pt'), ('DNS', '*.googleadapis.com'), ('DNS', '*.googleapis.cn'), ('DNS', '*.googlecommerce.com'), ('DNS', '*.googlevideo.com'), ('DNS', '*.gstatic.cn'), ('DNS', '*.gstatic.com'), ('DNS', '*.gvt1.com'), ('DNS', '*.gvt2.com'), ('DNS', '*.metric.gstatic.com'), ('DNS', '*.urchin.com'), ('DNS', '*.url.google.com'), ('DNS', '*.youtube-nocookie.com'), ('DNS', '*.youtube.com'), ('DNS', '*.youtubeeducation.com'), ('DNS', '*.yt.be'), ('DNS', '*.ytimg.com'), ('DNS', 'android.clients.google.com'), ('DNS', 'android.com'), ('DNS', 'developer.android.google.cn'), ('DNS', 'developers.android.google.cn'), ('DNS', 'g.co'), ('DNS', 'goo.gl'), ('DNS', 'google-analytics.com'), ('DNS', 'google.com'), ('DNS', 'googlecommerce.com'), ('DNS', 'source.android.google.cn'), ('DNS', 'urchin.com'), ('DNS', 'www.goo.gl'), ('DNS', 'youtu.be'), ('DNS', 'youtube.com'), ('DNS', 'youtubeeducation.com'), ('DNS', 'yt.be')), 'notBefore': u'Aug 15 16:21:42 2017 GMT', 'caIssuers': (u'http://pki.google.com/GIAG2.crt',), 'OCSP': (u'http://clients1.google.com/ocsp',), 'serialNumber': u'7DBD8005B56D0B01', 'notAfter': 'Nov  7 16:05:00 2017 GMT', 'version': 3L, 'subject': ((('countryName', u'US'),), (('stateOrProvinceName', u'California'),), (('localityName', u'Mountain View'),), (('organizationName', u'Google Inc'),), (('commonName', u'*.google.com'),)), 'issuer': ((('countryName', u'US'),), (('organizationName', u'Google Inc'),), (('commonName', u'Google Internet Authority G2'),))}
 
 Usage:method
-python tulpar.py method http://192.168.213.168
+python vcsan.py method http://192.168.213.168
 192.168.213.168
 [+]URL: http://192.168.213.168 
 ==========
@@ -331,14 +331,14 @@ python tulpar.py method http://192.168.213.168
 Methods:  
 
 Usage:IP2Location
-python tulpar.py IP2Location http://139.162.128.50
+python vcsan.py IP2Location http://139.162.128.50
 139.162.128.50
 [+]URL: http://139.162.128.50 
 ==========
 City: 
 
 Usage:FileInputAvailable
-python tulpar.py FileInputAvailable http://192.168.213.168
+python vcsan.py FileInputAvailable http://192.168.213.168
 192.168.213.168
 [+]URL: http://192.168.213.168 
 ==========
